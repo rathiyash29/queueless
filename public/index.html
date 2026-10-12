@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QueueLess - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h2>QueueLess</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="login.html">Login / Register</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero">
+      <h1>QueueLess</h1>
+      <h3>Virtual Queue Management System</h3>
+      <p>Join queues online, get a digital token and track your turn live. No more standing in line.</p>
+      <a href="login.html"><button>Get Started</button></a>
+    </div>
+
+    <div class="card">
+      <h3>How QueueLess works</h3>
+      <div class="steps">
+        <div><span>👤</span>User</div>
+        <div><span>🗂️</span>Select Service</div>
+        <div><span>➕</span>Join Queue</div>
+        <div><span>🎟️</span>Get Token</div>
+        <div><span>📡</span>Track Queue</div>
+        <div><span>✅</span>Your Turn</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Available services</h3>
+      <div id="serviceList"></div>
+    </div>
+
+    <p class="footer">Team: Yash Govind Rathi · Soumya Sachin Patharwalkar · Harshiv K Mehta</p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>showServicesOnHome();</script>
+</body>
+</html>

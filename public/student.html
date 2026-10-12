@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QueueLess - Student</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h2>QueueLess</h2>
+    <div>
+      <a href="student.html">Dashboard</a>
+      <a href="history.html">History</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h2 id="welcome"></h2>
+
+    <div class="card">
+      <h3>1. Select a service</h3>
+      <div id="serviceList"></div>
+      <button onclick="joinQueue()">Join Queue</button>
+    </div>
+
+    <div class="card">
+      <h3>2. Your token and status</h3>
+      <div id="tokenBox"></div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+  <script>initStudent();</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>QueueLess - Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <h2>QueueLess Admin</h2>
+    <div><a href="#" onclick="logout()">Logout</a></div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h3>Select service</h3>
+      <select id="serviceSelect" onchange="loadAdminQueue()"></select>
+      <button class="green" onclick="callNextToken()">Call Next Token</button>
+    </div>
+
+    <div class="stats card">
+      <div>Now serving<br><b id="statServing">-</b></div>
+      <div>Waiting<br><b id="statWaiting">0</b></div>
+      <div>Served<br><b id="statServed">0</b></div>
+      <div>Skipped<br><b id="statSkipped">0</b></div>
+    </div>
+
+    <div class="card">
+      <h3>Current queue</h3>
+      <table>
+        <thead>
+          <tr><th>Token</th><th>Student</th><th>Status</th><th>Actions</th></tr>
+        </thead>
+        <tbody id="tokenTable"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>Manage services</h3>
+      <table>
+        <thead>
+          <tr><th>Prefix</th><th>Service</th><th>Counter</th><th>Action</th></tr>
+        </thead>
+        <tbody id="serviceTable"></tbody>
+      </table>
+      <br>
+      <input type="text" id="newService" placeholder="New service name">
+      <input type="number" id="newCounter" placeholder="Counter number">
+      <button onclick="addService()">Add Service</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+  <script>initAdmin();</script>
+</body>
+</html>
